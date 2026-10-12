@@ -57,6 +57,164 @@
             box-shadow: none !important;
         }
 
+
+
+
+        /* ===== CUSTOMER FORM BUTTON THEME ===== */
+
+        /* Save Customer / Update Customer */
+        #customerForm button[type="submit"] {
+            background: rgba(198, 165, 122, 0.12) !important;
+            color: #d6b990 !important;
+            border: 1px solid rgba(198, 165, 122, 0.35) !important;
+            box-shadow: none !important;
+            transition: background-color 0.2s ease, border-color 0.2s ease;
+        }
+
+        #customerForm button[type="submit"]:hover {
+            background: rgba(198, 165, 122, 0.20) !important;
+            border-color: rgba(198, 165, 122, 0.55) !important;
+        }
+
+        /* Clear / Reset */
+        #clearFormButton {
+            background: transparent !important;
+            color: #bfc6d0 !important;
+            border: 1px solid rgba(255, 255, 255, 0.18) !important;
+            box-shadow: none !important;
+            transition: background-color 0.2s ease, color 0.2s ease;
+        }
+
+        #clearFormButton:hover {
+            background: rgba(255, 255, 255, 0.07) !important;
+            color: #ffffff !important;
+        }
+
+        /* Back */
+        /*#customerForm a.btn {*/
+        /*    background: transparent !important;*/
+        /*    color: #bfc6d0 !important;*/
+        /*    border: 1px solid rgba(255, 255, 255, 0.18) !important;*/
+        /*    box-shadow: none !important;*/
+        /*    text-decoration: none;*/
+        /*    transition: background-color 0.2s ease, color 0.2s ease;*/
+        /*}*/
+
+        /*#customerForm a.btn:hover {*/
+        /*    background: rgba(255, 255, 255, 0.07) !important;*/
+        /*    color: #ffffff !important;*/
+        /*}*/
+
+
+
+        /* Back button at the top */
+        #backButton {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0;
+            font-size: 18px;
+
+            background: transparent !important;
+            color: #bfc6d0 !important;
+            border: none !important;
+            box-shadow: none !important;
+            text-decoration: none;
+
+            transition: color 0.2s ease;
+        }
+
+        #backButton:hover {
+            background: transparent !important;
+            color: #c6a57a !important;
+        }
+
+
+
+
+
+        /* Image upload area */
+        #imageUploadBox {
+            background: rgba(255, 255, 255, 0.035) !important;
+            border: 1px dashed rgba(198, 165, 122, 0.30) !important;
+            border-radius: 12px;
+        }
+
+        /* File chooser */
+        #imageInput {
+            background: rgba(255, 255, 255, 0.04) !important;
+            border: 1px solid rgba(255, 255, 255, 0.10) !important;
+            color: #c4cbd5 !important;
+            border-radius: 8px;
+        }
+
+        #imageInput::file-selector-button {
+            background: rgba(198, 165, 122, 0.12);
+            color: #d6b990;
+            border: none;
+            border-right: 1px solid rgba(198, 165, 122, 0.25);
+            padding: 7px 10px;
+            margin: -1px 10px -1px -6px;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+
+        #imageInput::file-selector-button:hover {
+            background: rgba(198, 165, 122, 0.23);
+        }
+
+        /* Image preview */
+        #imagePreview {
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.30);
+        }
+
+
+        /* Remove image button */
+        #removeImageButton {
+            background: rgba(200, 79, 79, 0.85) !important;
+            color: #ffffff !important;
+            border: 1px solid rgba(200, 79, 79, 0.35) !important;
+            box-shadow: none !important;
+            transition: background-color 0.2s ease;
+        }
+
+        #removeImageButton:hover {
+            background: #c84f4f !important;
+        }
+
+
+
+        /* FORM SIZE*/
+
+        /* Reduce spacing between form fields */
+        #customerForm .mb-2 {
+            margin-bottom: 10px !important;
+        }
+
+        #customerForm .mb-3 {
+            margin-bottom: 12px !important;
+        }
+
+        /* heading more compact */
+        .form-heading {
+            margin-bottom: 14px !important;
+        }
+
+        /* image upload area more compact */
+        #imageUploadBox {
+            padding: 10px !important;
+        }
+
+        #customerForm > .d-flex.gap-2 {
+            align-items: center;
+        }
+
+        #customerForm > .d-flex.gap-2 button[type="submit"],
+        #customerForm > .d-flex.gap-2 button[type="button"] {
+            min-height: 40px;
+            font-size: 12px;
+        }
+
     </style>
 
 </head>
@@ -89,8 +247,8 @@
         position:relative;
         z-index:2;
 
-        width:350px;
-        max-width:92%;
+        width: 430px;
+        max-width: 94%;
 
         background:rgba(15,18,24,0.55);
 
@@ -108,8 +266,18 @@
         inset 0 1px 0 rgba(255,255,255,0.05);
 ">
 
+
+    <!-- Back Button -->
+    <div class="mb-3">
+        <a id="backButton"
+           href="${pageContext.request.contextPath}/customers"
+           class="btn">
+            <i class="bi bi-arrow-left"></i>
+        </a>
+    </div>
+
     <!-- Heading -->
-    <div class="text-center mb-3">
+    <div class="text-center mb-3 form-heading">
 
         <h2 style="
             color:white;
@@ -386,7 +554,7 @@
 
             <% } %>
 
-            <div style="
+            <div id="imageUploadBox" style="
             background:rgba(255,255,255,0.05);
             border:1px dashed rgba(255,255,255,0.12);
             border-radius:12px;
@@ -475,7 +643,7 @@
 
                 <i class="bi bi-check-circle me-1"></i>
 
-                <%= editing ? "Update Customer" : "Save Customer" %>
+                <%= editing ? "Update Customer" : "Add Customer" %>
 
             </button>
 
@@ -491,25 +659,6 @@
                 <i class="bi bi-x-circle me-1"></i>
                 <%= editing ? "Reset" : "Clear" %>
             </button>
-
-            <a href="${pageContext.request.contextPath}/customers"
-               class="btn"
-
-               style="
-                    background:transparent;
-                    color:#c0c7d0;
-                    border:1px solid #58606b;
-                    height:42px;
-                    font-size:13px;
-                    display:flex;
-                    align-items:center;
-               ">
-
-                <i class="bi bi-arrow-left me-1"></i>
-
-                Back
-
-            </a>
 
         </div>
 

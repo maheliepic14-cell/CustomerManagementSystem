@@ -515,6 +515,99 @@
         }
     }
 
+
+
+    /*BUTTON THEME*/
+
+    /* Add Customer */
+    .container a[href$="/customer-form"] {
+        background: rgba(198, 165, 122, 0.12) !important;
+        color: #d6b990 !important;
+        border: 1px solid rgba(198, 165, 122, 0.35) !important;
+        transition: background-color 0.2s ease, border-color 0.2s ease;
+    }
+
+    .container a[href$="/customer-form"]:hover {
+        background: rgba(198, 165, 122, 0.20) !important;
+        border-color: rgba(198, 165, 122, 0.55) !important;
+    }
+
+    /* Logout */
+    #logoutButton {
+        background: rgba(200, 79, 79, 0.12) !important;
+        color: #df9999 !important;
+        border: 1px solid rgba(200, 79, 79, 0.35) !important;
+        transition: background-color 0.2s ease, border-color 0.2s ease;
+    }
+
+    #logoutButton:hover {
+        background: rgba(200, 79, 79, 0.22) !important;
+        border-color: rgba(200, 79, 79, 0.55) !important;
+    }
+
+    /* Search */
+    #searchForm button[type="submit"] {
+        background: rgba(255, 255, 255, 0.07) !important;
+        color: #d5d9df !important;
+        border: 1px solid rgba(255, 255, 255, 0.12) !important;
+        transition: background-color 0.2s ease;
+    }
+
+    #searchForm button[type="submit"]:hover {
+        background: rgba(255, 255, 255, 0.13) !important;
+    }
+
+    /* Clear */
+    #clearButton {
+        background: transparent !important;
+        color: #bfc6d0 !important;
+        border: 1px solid rgba(255, 255, 255, 0.18) !important;
+        transition: background-color 0.2s ease, color 0.2s ease;
+    }
+
+    #clearButton:hover {
+        background: rgba(255, 255, 255, 0.07) !important;
+        color: #ffffff !important;
+    }
+
+    /* Edit */
+    a.me-3 {
+        color: #b9c5d3 !important;
+        transition: color 0.2s ease;
+    }
+
+    a.me-3:hover {
+        color: #d6b990 !important;
+    }
+
+    /* Delete */
+    a.delete-btn {
+        background: rgba(200, 79, 79, 0.10) !important;
+        color: #d98787 !important;
+        border: 1px solid rgba(200, 79, 79, 0.30) !important;
+        transition: background-color 0.2s ease, border-color 0.2s ease;
+    }
+
+    a.delete-btn:hover {
+        background: rgba(200, 79, 79, 0.20) !important;
+        color: #e6a0a0 !important;
+        border-color: rgba(200, 79, 79, 0.48) !important;
+    }
+
+
+    /* table borders consistent after AJAX pagination */
+    .table > tbody > tr > td {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.04) !important;
+        box-shadow: none !important;
+    }
+
+    .table > tbody > tr:last-child > td {
+        border-bottom: none !important;
+    }
+
+
+
+
 </style>
 
 <style>
