@@ -44,6 +44,34 @@ The application uses the JavaScript Fetch API to communicate with Servlets async
 - Dynamic customer list updates.
 - Form clearing and resetting.
 
+- 
+## Screenshots
+
+### Login Page
+
+<img width="1358" height="636" alt="login" src="https://github.com/user-attachments/assets/8bbf9b32-6a14-4f6a-a6b3-042271648f97" />
+
+### Registration Page
+
+<img width="1358" height="636" alt="register" src="https://github.com/user-attachments/assets/378df09a-bd25-4f95-9dc6-02cbce3ce856" />
+
+### Customer List
+
+<img width="1358" height="636" alt="list" src="https://github.com/user-attachments/assets/940a52f9-4d20-4cd8-8c0b-5def7c7726ce" />
+
+### Add Customer / Edit Customer
+
+<img width="1358" height="585" alt="add" src="https://github.com/user-attachments/assets/46881088-d128-485a-9b03-5442e56d8dda" />
+
+### Success Popup
+
+<img width="1358" height="636" alt="popup" src="https://github.com/user-attachments/assets/d39ca6d3-dfda-4f7b-861e-66ea758be3ad" />
+
+### Validation Errors
+
+<img width="1358" height="636" alt="validation" src="https://github.com/user-attachments/assets/e5980da0-be02-4915-89f5-b86de1191758" />
+
+
 ## Technology Stack
 
 | Technology | Purpose |
